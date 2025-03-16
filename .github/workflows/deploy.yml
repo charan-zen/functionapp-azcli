@@ -18,13 +18,12 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Set up Azure Functions
-        run: |
-          npm install -g azure-functions-core-tools@4 --unsafe-perm true
+      - name: Install Azure Functions Core Tools
+        run: npm install -g azure-functions-core-tools@4 --unsafe-perm true
 
-          - name: Package Function App
-          run: |
-            zip -r function-app.zip .
+      - name: Package Function App
+        run: |
+          zip -r function-app.zip .
 
       - name: Deploy Function App
         run: |
