@@ -1,6 +1,6 @@
 const { app } = require('@azure/functions');
 
-app.timer('timerTrigger1', {
+app.timer('timerTrigger2', {
     schedule: '0 */1 * * * *',
     handler: (myTimer, context) => {
         context.log('Timer function processed request.');
